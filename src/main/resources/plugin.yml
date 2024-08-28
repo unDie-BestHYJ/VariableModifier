@@ -1,0 +1,4 @@
+name: VariableModifier
+version: '${project.version}'
+main: com.plugins.variablemodifier.VariableModifier
+depend: [PlaceholderAPI]

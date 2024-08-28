@@ -1,0 +1,4 @@
+name: VariableModifier
+version: '1.0-SNAPSHOT'
+main: com.plugins.variablemodifier.VariableModifier
+depend: [PlaceholderAPI]
