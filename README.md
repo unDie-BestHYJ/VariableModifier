@@ -17,3 +17,4 @@
 spigot 1.12.2
 
 placeholderAPI 2.9.2
+
