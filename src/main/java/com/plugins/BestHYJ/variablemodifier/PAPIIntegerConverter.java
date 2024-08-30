@@ -40,6 +40,30 @@ public class PAPIIntegerConverter extends PlaceholderExpansion {
 
         plugin.getLogger().info("Received identifier: " + identifier);
 
+        // 使用 PlaceholderAPI 解析原始占位符
+        String value = PlaceholderAPI.setPlaceholders(player, "%" + identifier + "%");
+        plugin.getLogger().info("Parsed value: " + value);
+
+        try {
+            float number = Float.parseFloat(value);
+            int integerValue = Math.round(number);
+            plugin.getLogger().info("Result value: " + value);
+            return String.valueOf(integerValue);
+        } catch (NumberFormatException e) {
+            plugin.getLogger().warning("Failed to parse value as float: " + value);
+            return "0";
+        }
+    }
+
+//    @Override
+//    public String onPlaceholderRequest(Player player, String identifier) {
+//        if (identifier == null || identifier.isEmpty()) {
+//            plugin.getLogger().warning("Identifier is null or empty.");
+//            return null;
+//        }
+//
+//        plugin.getLogger().info("Received identifier: " + identifier);
+//
 //        if (identifier.startsWith("intconverter_")) {
 //            String originalPlaceholder = identifier.substring("intconverter_".length());
 //            plugin.getLogger().info("Original placeholder: " + originalPlaceholder);
@@ -58,19 +82,5 @@ public class PAPIIntegerConverter extends PlaceholderExpansion {
 //            }
 //        }
 //        return null;
-
-        // 使用 PlaceholderAPI 解析原始占位符
-        String value = PlaceholderAPI.setPlaceholders(player, "%" + identifier + "%");
-        plugin.getLogger().info("Parsed value: " + value);
-
-        try {
-            float number = Float.parseFloat(value);
-            int integerValue = Math.round(number);
-            plugin.getLogger().info("Result value: " + value);
-            return String.valueOf(integerValue);
-        } catch (NumberFormatException e) {
-            plugin.getLogger().warning("Failed to parse value as float: " + value);
-            return "0";
-        }
-    }
+//    }
 }

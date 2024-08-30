@@ -8,7 +8,7 @@
 
 在变量前加 identifier_
 
-比如：%player_level%  --> %identifier_player_level%
+比如：使用 %identifier_player_level% 代替 %player_level%
 
 
 
