@@ -17,5 +17,3 @@
 spigot 1.12.2
 
 placeholderAPI 2.9.2
-
-其它版本没测试过，请自行测试一下
