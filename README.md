@@ -6,9 +6,9 @@
 
 ## 插件用法：
 
-在变量前加 identifier_
+在变量前加 intconverter_
 
-比如：使用 %identifier_player_level% 代替 %player_level%
+比如：使用 %intconverter_player_level% 代替 %player_level%
 
 
 
