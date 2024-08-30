@@ -1,4 +1,5 @@
 name: VariableModifier
-version: '${project.version}'
-main: com.plugins.variablemodifier.VariableModifier
+version: 1.0.0
+main: com.plugins.BestHYJ.variablemodifier.VariableModifier
+api-version: 1.12
 depend: [PlaceholderAPI]
